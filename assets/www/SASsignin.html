@@ -16,27 +16,25 @@
 					sup=false;
 					alert("please enter a user id");
 				}
-				if(inputs[1].value == ""){
+				else if(inputs[1].value == ""){
 					alert("please enter a password");
 					sup=false;
 				}
-				if(inputs[1].value != inputs[2].value){
+				else if(inputs[1].value != inputs[2].value){
 					sup=false;
 					alert("passwords do not match");
 				}
-				if(!optional[0].checked && !optional[1].checked){
-					alert("seriously dude, click one of the two buttons");
+				else if(!optional[0].checked && !optional[1].checked){
+					alert("please select yes or no.");
+					sup=false;
 				}
-				if(optional[0].checked && (inputs[3].value =="" || inputs[4].value =="")){
+				else if(optional[0].checked && (inputs[3].value =="" || inputs[4].value =="")){
 					alert("please enter the url and password of the server provided by your health manager");
 					sup=false;
 				}				
-				if(!(0<inputs[5].value<12)){
+				else if(!(0<inputs[5].value<12)){
 					alert("enter a valid time input");
 					sup=false;
-				}
-				if(!sup){
-					window.location.href="SASSignin.html";
 				}
 				if(sup){
 					window.location.href="SASHomescreen.html";
@@ -48,7 +46,7 @@
 
 	<body>
 		<div>
-			<img src="SASLOGO.jpeg" alt="Smarts and Stamina logo" height="300" width="300">
+			<img src="SASLOGO.png" alt="Smarts and Stamina logo" height="300" width="300">
 		</div>
 		<form>
 			<p>
