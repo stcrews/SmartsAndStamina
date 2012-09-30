@@ -32,7 +32,8 @@ var submitdata = function() {
 		alert("Please select an option for all data fields");
 	}
 	else{
-		window.location.href="SASHomescreen.html";
+		home();
+		//window.location.href="SASHomescreen.html";
 		
 	}
 
