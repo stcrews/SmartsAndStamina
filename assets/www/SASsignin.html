@@ -5,25 +5,58 @@
 		<title>SmartsAndStaminaStartup</title>
 		<link rel="stylesheet" type="text/css" href="SAS.css">
 		 <script type="text/javascript">
-			updatetime = function(){
-				alert("sup");
-				document.getElementById('time').innerHTML = document.getElementById('timeinput').value;
+		 		 
+			datacheck = function(){
+				var inputs = document.getElementsByName("input");
+				var optional = document.getElementsByName("usertype");
+				
+				var sup = new Boolean();
+				sup = true;
+				if(inputs[0].value == ""){
+					sup=false;
+					alert("please enter a user id");
+				}
+				if(inputs[1].value == ""){
+					alert("please enter a password");
+					sup=false;
+				}
+				if(inputs[1].value != inputs[2].value){
+					sup=false;
+					alert("passwords do not match");
+				}
+				if(!optional[0].checked && !optional[1].checked){
+					alert("seriously dude, click one of the two buttons");
+				}
+				if(optional[0].checked && (inputs[3].value =="" || inputs[4].value =="")){
+					alert("please enter the url and password of the server provided by your health manager");
+					sup=false;
+				}				
+				if(!(0<inputs[5].value<12)){
+					alert("enter a valid time input");
+					sup=false;
+				}
+				if(!sup){
+					window.location.href="SASSignin.html";
+				}
+				if(sup){
+					window.location.href="SASHomescreen.html";
+				}
 			}
 			</script>
-			<script type="text/javascript"></script>
+
 	</head>
 
-	<body onload="updatetime()">
+	<body>
 		<div>
 			<img src="SASLOGO.jpeg" alt="Smarts and Stamina logo" height="300" width="300">
 		</div>
-		<form action="File.html" method="post" target="SASsignin2">
+		<form>
 			<p>
 				Thank you for downloading the Smarts and Stamina App! To start things off, please enter your desired user name and password in the fields below
 			</p>
-			Username:<input type="text"><br/>
-			Password:<input type="password"><br/>
-			Reenter Password:<input type="password">
+			Username:<input name="input" type="text"><br/>
+			Password:<input name="input" type="password"><br/>
+			Reenter Password:<input name="input" type="password">
 			
 			<p>Are you using this app through a company fitness program or other group?</p>
 			
@@ -31,8 +64,8 @@
 			No, I am using this app on my own <input type="radio" name="usertype" value="r2">
 			
 			<p id="optional">Please enter the server URL and password provided by your fitness manager below<br/>
-				URL<input type="url"><br/>
-				Password<input type="text">
+				URL<input name="input" type="url"><br/>
+				Password<input name="input" type="text">
 			</p>
 			
 			<p>Please enter a time of day that would be convenient for you to collect data.
@@ -40,12 +73,9 @@
 			 later than the selection time chosen will not be counted</p>
 			 
 			
-			I would like to collect data at <input id="timeinput" onchange='updatetime' type="text"> each day.<br/>
+			I would like to collect data at <input id="timeinput" name="input" type="number"> each day.<br/>
 			
-					 
-			 <button><a href="SASsignin2.html">Submit</a></button>
-			
-				</form>
-
+			<input onclick="datacheck()" type="button" value="Submit">	
+		</form>
 	</body>
 </html>

@@ -32,7 +32,7 @@ var submitdata = function() {
 		alert("Please select an option for all data fields");
 	}
 	else{
-		alert("all fields entered successfully");
+		window.location.href="SASHomescreen.html";
 		
 	}
 
@@ -52,11 +52,9 @@ var randomquestion = function(){
 	questions[8] = "Who did you help today?";
 	questions[9] = "What did you do today to make someone else happy?";
 	var RQ_div = $('RQ');
-	var RQ_table = new Element('table');
 	var RQ_row = new Element('tr');
 	RQ_row.insert('<td>' + questions[randomnumber] + '<td>');
-	RQ_table.insert(RQ_row);
-	RQ_div.insert(RQ_table);
+	RQ_div.insert(RQ_row);
 }
 
 

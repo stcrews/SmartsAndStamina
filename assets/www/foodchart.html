@@ -6,13 +6,13 @@
 		<title>Food Chart</title>
 		<link type="text/css" rel="stylesheet" href="SAS.css">
 		<script src="jquery.js"></script>
-		<script type="text/javascript">
-			
-		</script>
+		<script type="text/javascript" src="navigation.js"></script>
 	</head>
 	
 	<body>
-		<div class="buttons"><button id="b1">Food</button><button><a href="foodmood.html">Mood</a></button><button>Sleep</button><button>Exercise</button><button><a href="SASHomescreen.html">Home</a></button></div>
+		<div class="buttons"><button>Food</button><button onclick="foodmood()">Mood</button>
+			<button>Sleep</button><button>Exercise</button>
+			<button onclick="home()">Home</button></div>
 		<img id="chart1" class="viewable" src="chart1.png" height="300" width="500" alt="Food Chart">
 		<img id="chart2" class="hidden" src="chart2.png" height="300" width="500" alt="Food/Mood Chart">
 	</body>
