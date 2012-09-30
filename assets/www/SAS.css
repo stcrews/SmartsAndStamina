@@ -1,0 +1,38 @@
+body{
+}
+
+form{
+	background:gray;
+	text:bold;
+	border:black;
+	margin:0px auto;
+	width:80%;
+}
+
+p{
+	position:relative;
+}
+
+img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+div.buttons{
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	height:auto;
+}
+
+img.hidden{
+	visibility:hidden;
+}
+
+img.viewable{
+	visibility:visible;
+	position:absolute; 
+	top:50px;
+	right:300px;
+}

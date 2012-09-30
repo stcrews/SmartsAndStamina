@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UUTF-8">
+		<title>SmartsAndStaminaStartup</title>
+		<link rel="stylesheet" type="text/css" href="SAS.css">
+		 <script type="text/javascript">
+			updatetime = function(){
+				alert("sup");
+				document.getElementById('time').innerHTML = document.getElementById('timeinput').value;
+			}
+			</script>
+			<script type="text/javascript"></script>
+	</head>
+
+	<body onload="updatetime()">
+		<div>
+			<img src="SASLOGO.jpeg" alt="Smarts and Stamina logo" height="300" width="300">
+		</div>
+		<form action="File.html" method="post" target="SASsignin2">
+			<p>
+				Thank you for downloading the Smarts and Stamina App! To start things off, please enter your desired user name and password in the fields below
+			</p>
+			Username:<input type="text"><br/>
+			Password:<input type="password"><br/>
+			Reenter Password:<input type="password">
+			
+			<p>Are you using this app through a company fitness program or other group?</p>
+			
+			Yes, I am using this app through a group<input type="radio" name="usertype" value="r1"><br>
+			No, I am using this app on my own <input type="radio" name="usertype" value="r2">
+			
+			<p id="optional">Please enter the server URL and password provided by your fitness manager below<br/>
+				URL<input type="url"><br/>
+				Password<input type="text">
+			</p>
+			
+			<p>Please enter a time of day that would be convenient for you to collect data.
+			 The data collection process will only take a few minutes to do, but data submitted much
+			 later than the selection time chosen will not be counted</p>
+			 
+			
+			I would like to collect data at <input id="timeinput" onchange='updatetime' type="text"> each day.<br/>
+			
+					 
+			 <button><a href="SASsignin2.html">Submit</a></button>
+			
+				</form>
+
+	</body>
+</html>
