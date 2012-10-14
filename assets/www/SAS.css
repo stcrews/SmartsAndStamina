@@ -1,0 +1,50 @@
+body{
+	background-color:orange;
+	font:Arial bold 12px;
+	padding-top:10px;
+	padding-left:10px;
+	padding-bottom:10px;
+	padding-right:10px;
+	
+	border:10px blue groove;
+}
+
+form{
+	text:bold;
+	border:black;
+	margin:0px auto;
+	width:80%;
+}
+
+p{
+	position:relative;
+}
+
+img{
+	display:block;
+	background-color:orange;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+span.q{
+	font-weight: bold;
+	text-align:center;
+}
+div.buttons{
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	height:auto;
+}
+
+img.hidden{
+	visibility:hidden;
+}
+
+img.viewable{
+	visibility:visible;
+	position:absolute; 
+	top:50px;
+	right:300px;
+}
