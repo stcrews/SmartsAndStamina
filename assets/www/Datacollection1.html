@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Data Collection</title>
+		<script src="prototype.js" ></script>
+		<script src="navigation.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+		<script src="Datacollection1.js"></script>
+		<link rel="Stylesheet" type="text/css" href="SAS.css">
+	</head>
+	
+	<body onload="randomquestion()">
+		<div>
+			<div> Please answer all of the following questions.</div> 
+			<br>
+			<div> <span class="q">How was your day? </span>
+			<form name="dform">
+				<div> <input type="radio" name="day" value="d1"> 1: Terrible - the weight of the world is upon me</div>
+				<div> <input type="radio" name="day" value="d2"> 2: Bad - more negative than positive emotions</div>
+				<div> <input type="radio" name="day" value="d3"> 3: Neutral - no big pull in either direction</div>
+				<div> <input type="radio" name="day" value="d4"> 4: Good - more positive than negative emotions</div>
+				<div> <input type="radio" name="day" value="d5"> 5: Great - feeling on top of the world!</div>
+			</form>
+			</div>
+			<br>
+			<div> <span class="q">How much did you move about today? </span>
+			<form name="mform">
+				<div> <input type="radio" name="move" value="m1"> 1: Inactive - moved from chair to chair all day</div>
+				<div> <input type="radio" name="move" value="m2"> 2: Slight - the equivalent of a 15-min walk </div>
+				<div> <input type="radio" name="move" value="m3"> 3: Fair - 30 minutes of low intensity activity </div>
+				<div> <input type="radio" name="move" value="m4"> 4: Active - 30 minutes of moderate intensity activity</div>
+				<div> <input type="radio" name="move" value="m5"> 5: Vigorous - thorough workout or hardly sat down today </div>
+			</form>
+			</div> 
+			<br>
+			<div> <span class="q">Did you eat your vegetables?</span>
+			<form name="fform"> 
+				<div> Today I ate ___ servings of fruits and vegetables</div>
+				<div> <input type="radio" name="fruits" value="f1"> 1: Hardly any (0-2 servings) </div>
+				<div> <input type="radio" name="fruits" value="f2"> 2: Just a taste (3-4 servings) </div>
+				<div> <input type="radio" name="fruits" value="f3"> 3: Almost enough (5-6 servings) </div>
+				<div> <input type="radio" name="fruits" value="f4"> 4: Mom would be proud (7-8 servings) </div>
+				<div> <input type="radio" name="fruits" value="f5"> 5: Leading the way (9+ servings)</div>
+			</form>
+			</div> 
+			<br>
+			<div> <span class="q">How much sleep did you get in the last 24 hours?</span> 
+			<form name="sform">
+				<div> <input type="radio" name="sleep" value="s1"> 1: Sleepless - barely slept at all</div>
+				<div> <input type="radio" name="sleep" value="s1"> 2: Restless - got about 5 hours of sleep</div>
+				<div> <input type="radio" name="sleep" value="s1"> 3: Borderline - got about 6 hours of sleep</div>
+				<div> <input type="radio" name="sleep" value="s1"> 4: Almost there - got about 7 hours of sleep</div>
+				<div> <input type="radio" name="sleep" value="s1"> 5: Fully rested - got right around 8 hours of sleep</div>
+			</form>
+			</div> 
+			<br>
+			<span class="q"><div id="RQ"> </div></span>
+			<div><input type="text" name="box"></div>
+			<br>
+			<div><input id='calc' type="button" value="Submit" onclick="submitdata()"></div>
+			</div>
+		
+	</body>
+
+
+
+</html>
